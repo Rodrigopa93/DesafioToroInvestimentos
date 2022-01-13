@@ -1,45 +1,47 @@
 <main role="main">
-
-    <div class="py-5">
+    <div class="container-fluid bg-secondary">
         <div class="container">
-            <div class="row">
+            <div class="row p-4">
+                <div *ngFor="let ca of checkingAccountAmount" class="col-md-6">
+                    <p class="font-weight-bold  text-center text-light">Conta Corrente: R$ {{ ca.balance }}</p>
+                </div>
+                <div *ngFor="let p of patrimony" class="col-md-6">
+                    <p class="font-weight-bold text-center text-light">Patrimônio: R$ {{ p.balance }}</p>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="album py-5 bg-light">
         <div class="container">
-
             <div class="row">
-                <div class="col-md-4">
+                <div *ngFor="let position of positions" class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="#" alt="">
                         <div class="card-body">
-                            <p class="card-text"></p>
+                            <p class="h4">{{ position.symbol }}</p>
                         </div>
-                        <div class="card-footer"></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12">
+                                    <p class="card-text text-secondary">PREÇO DO ATIVO</p>
+                                </div>
+                                <div class="col-lg-5 col-md-12">
+                                    <p class="card-text font-weight-bold float-lg-right">R$ {{ position.currentPrice }}</p>
+                                </div>
+                            </div>
+                            <div class="row mt-md-3">
+                                <div class="col-lg-6 col-md-12">
+                                    <p class="card-text text-secondary">Quantidade</p>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <p class="card-text font-weight-bold float-lg-right">{{ position.amount }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="#" alt="">
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="#" alt="">
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
-    </div>
 
+    </div>
 </main>

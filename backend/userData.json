@@ -1,0 +1,24 @@
+{
+    "checkingAccountAmount": [
+        {
+            "balance": 234.00
+        }
+    ],
+    "positions": [
+        {
+            "symbol": "PETR4",
+            "amount": 2,
+            "currentPrice": 28.44
+        },
+        {
+            "symbol": "SANB11",
+            "amount": 3,
+            "currentPrice": 40.77
+        }
+    ],
+    "consolidated": [
+        {
+            "balance": 413.19
+        }
+    ]
+}
