@@ -1,27 +1,37 @@
-# AppClient
+# Desafio Toro US-002
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+<b>Projeto:</b>
 
-## Development server
+Será uma tela aonde terá informações como: Patrimônio, saldo atual da conta corrente e a lista de ativos pertencentes ao investidor. 
+A api sugerida na US-002 foi construída a partir de um pacote chamado json-server que cria um serviço JSON REST que será consumido pelo Angular, e consequentemente será exibido em tela as informações do usuário.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<b>Como executar a aplicação:</b>
 
-## Code scaffolding
+### Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Build
+### 🎲 Rodando Aplicação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+# Clone este repositório
+git clone <https://github.com/Rodrigopa93/DesafioToroInvestimentos.git>
 
-## Running unit tests
+# Acesse a pasta do projeto(appClient) no terminal/cmd
+cd appClient
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instale as dependências
+npm install
 
-## Running end-to-end tests
+# Entre na pasta do backend do Projeto e rode o seguinte comando para que o JSON Server seja inicializado:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npx json-server --watch userPositions.json
 
-## Further help
+# O servidor backend inciará na porta:3000 - acesse <http://localhost:3000>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Execute a aplicação
+ng server
+
+# O servidor inciará na porta:4200 - acesse <http://localhost:4200/>
