@@ -25,8 +25,10 @@ cd appClient
 # Instale as dependências
 npm install
 
-# Entre na pasta do backend do Projeto e rode o seguinte comando para que o JSON Server seja inicializado:
+# Instale o pacote JSON Server
+npm install -g json-server
 
+# Entre na pasta do backend do Projeto e rode o seguinte comando para que o JSON Server seja inicializado:
 npx json-server --watch userPositions.json
 
 # O servidor backend inciará na porta:3000 - acesse <http://localhost:3000>
