@@ -1,11 +1,43 @@
 # Desafio Toro US-002
 
-<b>Projeto:</b>
+TORO-002 - Eu, como investidor, gostaria de visualizar meu saldo, meus investimentos e meu patrimônio total na Toro.
 
-Será uma tela aonde terá informações como: Patrimônio, saldo atual da conta corrente e a lista de ativos pertencentes ao investidor. 
-A api sugerida na US-002 foi construída a partir de um pacote chamado json-server que cria um serviço JSON REST que será consumido pelo Angular, e consequentemente será exibido em tela as informações do usuário.
+Restrições:
+Patrimônio do usuário deve conter as seguintes informações
+Saldo atualmente em conta corrente
+Lista de ativos (ações) pertencentes ao usuário, com quantidade de cada ativo e valor individual atual de cada um. (Ex: 10 ações PETR4, valor individual R$25,00)
+Patrimônio sumarizado (Saldo + Valor totalizado dos ativos)
 
-<b>Como executar a aplicação:</b>
+API de saldo e patrimônio do cliente:
+
+```
+GET <apiBaseUrl>/userPosition
+
+{
+    "checkingAccountAmount": [
+        {
+            "balance": 234.00
+        }
+    ],
+    "positions": [
+        {
+            "symbol": "PETR4",
+            "amount": 2,
+            "currentPrice": 28.44
+        },
+        {
+            "symbol": "SANB11",
+            "amount": 3,
+            "currentPrice": 40.77
+        }
+    ],
+    "consolidated": [
+        {
+            "balance": 413.19
+        }
+    ]
+}
+```
 
 ### Pré-requisitos
 
@@ -29,7 +61,7 @@ npm install
 npm install -g json-server
 
 # Entre na pasta do backend do Projeto e rode o seguinte comando para que o JSON Server seja inicializado:
-npx json-server --watch userPositions.json
+npx json-server --watch userData.json
 
 # O servidor backend inciará na porta:3000 - acesse <http://localhost:3000>
 
